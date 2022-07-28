@@ -1,20 +1,174 @@
 body {
-    min-height: 100vh;
-    background-color: aqua;
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    display: flex;  
+    background-color: #496D1D;
+}
+/* SIDEBAR */
+
+.left {
+    flex-grow: 1;
+    background-color: #496D1D;
+    color: #7FBD32;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 16px;
+    gap: 16px;
+    color: white;
+}
+.left li {
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+}
+.left ul {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.left h1 {
+    font-size: 18px;
+}
+
+/* HEADER */
+.right {
+    flex-grow: 5;
+    display: flex;
+    flex-direction: column;
+}
+.header {
+    background-color: #7FBD32;
+    display: flex;
     justify-content: space-between;
+    color: white;
+}
+.headerleft {
+    display: flex;
+    padding: 16px;
+    gap: 16px;
+}
+.headerleft img{
+    height: 70px;
+}
+.headerright {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 60px;
+}
+.headerright button {
+    padding: 12px 24px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+.headerright button:hover {
+    background-color: #86e689; /* Green */
+    color: white;
+}
+
+/*  MID CONTENT */
+.midwrapper {
+   background: linear-gradient(#EEF8E3, #B0DC7A);  
+   flex-grow: 2;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
 }
 #middleid {
-    display: flex;
-    flex: 1;
-    gap: 10px;
+    flex-grow: 1;
+    display: grid;
     padding: 5%;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 40px;
+    
+}
+#middleid h1 {
+    grid-column: 1/9;
+    text-align: center;
 }
 .books {
-    background-color: beige;
-    height: fit-content;
-    aspect-ratio: 1/1;
+    background-color: rgb(133, 94, 65);
+    height: 150px;
+    width: 100px;
     padding: 10%;
+    border-radius: 10px;
+    border-left: 10px rgba(36, 9, 9, 0.525) solid;
+    transition: transform .2s;
+}
+.books:hover {
+    transform: scale(1.2);
+}
+.footer {
+    background-color: #213409;
+    color: #7FBD32;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    height: 5%;
+}
+.footer a {
+    text-decoration: none;
+    color: #7FBD32;
+}
+.popup {
+    background: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.popup-content {
+    height: 250px;
+    width: 500px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.popup-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+.popup-content form div {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+#addbtn {
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.close {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background-color: white;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    cursor: pointer;
 }

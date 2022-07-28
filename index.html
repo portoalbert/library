@@ -8,10 +8,51 @@
     <link rel="stylesheet" href="app.css">
 </head>
 <body>
-    <div class="header" id="headerid">HEADER</div>
-    <div class="middle" id="middleid"></div>
-    <div class="footer" id="footerid">FOOTER</div>
-
+    <div class="left">
+        <h1>MENU</h1>
+        <ul>
+            <li>HOME</li>
+            <li>BOOKSTORE</li>
+            <li>SETTINGS</li>
+        </ul>
+    </div>
+    <div class="right">
+        <div class="header" id="headerid">
+            <div class="headerleft">
+                <img src="img/profileicon.png">
+                <h2>Albert Porto</h2>
+            </div>
+            <div class="headerright"><button class="newtitle" onclick="popOpener();">Add Book</button></div>
+        </div>
+        <div class="midwrapper">
+            <h1>Your Library</h1>
+            <div class="middle" id="middleid">
+            </div>
+        </div>
+        <div class="footer" id="footerid">created by <a href="https://github.com/portoalbert?tab=repositories">Albert Porto</a></div>
+        <div class="popup">
+            <div class="popup-content">
+                <img src="img/close.png" alt="close" class="close" onclick="popCloser();">
+                <h1>Add New Anime</h1>
+                <form accept="#" method="get">
+                    <div>
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="booktitle" required>
+                    </div>
+                    <div>
+                        <label for="author">Author</label>
+                        <input type="text" name="author" id="author" min="0">
+                    </div>
+                    <div>
+                        <label for="pages">Pages</label>
+                        <input type="number" name="pages" min="0">
+                    </div>
+                    <button type="reset" onclick="bookAdder();" id="addbtn">ADD</button>
+                </form>
+        
+            </div>
+        </div>
+    </div>
     <script src="app.js"></script>
 </body>
 </html>
