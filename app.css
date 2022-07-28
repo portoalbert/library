@@ -100,15 +100,31 @@ body {
 }
 .books {
     background-color: rgb(133, 94, 65);
-    height: 150px;
-    width: 100px;
+    height: 200px;
+    width: 150px;
     padding: 10%;
     border-radius: 10px;
     border-left: 10px rgba(36, 9, 9, 0.525) solid;
     transition: transform .2s;
+    font-size: 24px;
+    font-weight: 900;
+    font-family: 'Square Peg';
+    text-transform: uppercase;
 }
 .books:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+.trash {
+    background: rgba(0, 0, 0, 0.0);
+    border: 0;
+    cursor: pointer;
+}
+.trash:active {
+    background-color: rgba(36, 9, 9, .2);
+    transform: translateY(4px);
+}
+.trash img{
+    height: 20px;
 }
 .footer {
     background-color: #213409;
