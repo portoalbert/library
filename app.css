@@ -130,6 +130,9 @@ body {
     height: 20px;
     background: rgba(191, 21, 21, 0)
 }
+.favoritetwo {
+    background-color: red;
+}
 .icons {
     display: flex;
     justify-content: flex-end;
