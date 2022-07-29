@@ -1,23 +1,24 @@
 let myLibrary = [{
-        title: "MOBYDICK",
-        author: "Jonh Smith",
+        title: "In Search Of Lost Time",
+        author: "Marcel Proust",
         pages: 5
     },
     {
-        title: "beybalde",
-        author: "Albert Porto"
+        title: "Ulysses",
+        author: "James Joyce",
+        pages: 0
     },
     {
-        title: "beybalde",
-        author: "Albert Porto"
+        title: "Don Quixote",
+        author: "Miguel de Cervantes"
     },
     {
-        title: "beybalde",
-        author: "Albert Porto"
+        title: "One Hundred Years of Solitude",
+        author: "Gabriel Garcia Marquez"
     },
     {
-        title: "beybalde",
-        author: "Albert Porto"
+        title: "The Great Gatsby",
+        author: "F. Scott Fitzgerald"
     },
 ];
 const middleDiv = document.getElementById('middleid');
@@ -41,12 +42,17 @@ function addBookToLibrary(title,author,pages) {
 function displayBooks (bookname){
     const fragment = document.createDocumentFragment();
     const div = document.createElement('div');
+    const divinside = document.createElement('div')
     const trashicon = document.createElement('button')
     div.classList.add("books");
+    divinside.classList.add("icons")
     div.setAttribute('id','book'+counter)
     counter ++;
-    div.innerHTML = "Book: " + bookname.title + "<br> " + "<br> " + "By: " + bookname.author +  "<br> " +  "<br> " + "Pages: " + bookname.pages;
-    div.innerHTML += "<br> " + "<button class='trash' onclick='deleteBook ();'><img src='img/trashicon.png'></button>"
+    div.innerHTML = bookname.title + "<br> " +"<br> " + "By: " + bookname.author;
+    divinside.innerHTML = "<button class='trash' onclick='deleteBook ();'><img src='img/trashicon.png'></button>"
+    divinside.innerHTML += "<button class='favorite' onclick='favoritemarker ();'><img src='img/favoriteiconthree.png'></button>"
+    div.appendChild(divinside);
+    console.log(div);
     fragment.appendChild(div);
     middleDiv.appendChild(fragment);
 }
@@ -73,6 +79,9 @@ function bookAdder (){
     myLibrary.forEach(displayBooks);
     popCloser();
     }
+}
+function favoritemarker () {
+    console.log(this);
 }
 function deleteBook() {
     //console.log(this.book.myLibrary);
